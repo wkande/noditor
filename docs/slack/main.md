@@ -1,4 +1,4 @@
-# ***Slack Noditor App Overview***
+# Overview
 
 [Slack](https:www.slack.com) is a peer-to-peer communication platform that can also be used for machine-to-human communications. 
 The ***Noditor Module*** will post statistics, errors and alerts to a Slack Channel hosting the ***Slack Noditor App***.

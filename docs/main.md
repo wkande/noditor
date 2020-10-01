@@ -1,4 +1,4 @@
-# ***Noditor Overview***
+# Overview
 
 ***Noditor*** is a light weight monitoring system for Node.js Applications. Anything that uses Node.js can use ***Noditor***, back-end apps, electron, etc. It consists of three parts: *the Noditor Module, an Image API and the Slack Noditor App*. 
 
@@ -19,9 +19,9 @@ The ***Noditor Module*** pushes error and alert messages directly to a Slack Cha
 
 ```mermaid
 graph TB
-    A[fa:fa-code Noditor Module] --> |Memory/CPU| B[fa:fa-code Image API]
+    A[fa:fa-code Noditor Module.] --> |Memory/CPU| B[fa:fa-code Image API.]
     A -->| Messages | C
-    B--> | Chart | C[fa:fa-slack Slack Channel]
+    B--> | Chart | C[fa:fa-slack Slack Channel .]
     style A fill:#f9f9,stroke:#333,stroke-width:1px
     style B fill:#f9f9,stroke:#333,stroke-width:1px
 

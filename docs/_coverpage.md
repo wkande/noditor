@@ -15,7 +15,7 @@
 
 [npm](https://www.npmjs.com/package/noditor)
 [GitHub](https://github.com/wkande/noditor)
-[Get Started](/main.md?id=Noditor-Overview)
+[Get Started](/main.md?id=Overview)
 
 
 

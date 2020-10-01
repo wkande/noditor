@@ -1,5 +1,3 @@
-# ***Noditor Module Overview***
-
 The ***Noditor Module***, added to your Node.js Application, pushes messages and stats to a Slack Channel. The ***Slack Noditor App***, added to a Slack Channel, formats and display information received from the ***Noditor Module***.
 
 ## Installation
