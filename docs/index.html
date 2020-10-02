@@ -8,8 +8,14 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <!--link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css"-->
   <link rel="icon" type="image/png" href="./_images/logo-node.png">
+
   <!-- Stay with version 4 of docsify until next release is tested. -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
+  <!--link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" /-->
+
+  <!-- Theme: Simple (latest v0.x.x) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -19,15 +25,19 @@
     window.$docsify = {
       el: '#app',
       loadSidebar: true,
+      alias: {
+        './*/_sidebar.md': '/_sidebar.md'
+      },
       autoHeader: true,
       coverpage: ['/', '/_es/'],
       repo: 'https://github.com/wkande/noditor/tree/master/docs',
       //loadNavbar: true, // load from _navbar.md
-      //logo: '../_images/logo.png',
+      //logo: './_images/logo.png',
+      name:'Noditor',
       //name: 'Noditor<sub><small>2.1</small></sub><div style="font-size:small;">Node.js Monitoring</div>',
       //nameLink: '/', // For each route
       relativePath: false,
-      auto2top: true,
+      auto2top: false,
       onlyCover: true,
       externalLinkTarget: '_blank', // default: '_blank' or _self
       fallbackLanguages: ['en'],
@@ -40,24 +50,87 @@
         // Headline depth, 1 - 6
         depth: 6,
         hideOtherSidebarContent: true, // whether or not to hide other sidebar content
-     }
+      },
+      tabs: {
+        persist    : true,      // default
+        sync       : false,     // default true
+        theme      : 'classic', // default
+        tabComments: true,      // default
+        tabHeadings: true       // default
+      },
+      themeable: {
+          readyTransition : true, // default
+          responsiveTables: true  // default
+      }
     }
   </script>
   <!--script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script-->
   <!-- Stay with version 4 of docsify until next release is tested. -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4.11.6"></script>
+  <!-- docsify-tabs (latest v1.x.x) -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+
+  <!-- docsify-themeable (latest v0.x.x) -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
+
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
   <script src="//unpkg.com/mermaid/dist/mermaid.js"></script>
   <script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"> 
   <script>mermaid.initialize({ startOnLoad: true });</script>
 </body>
 <style>
+  :root {
+    --docsifytabs-border-color: #ededed;
+    --docsifytabs-tab-highlight-color: green;
+    --docsifytabs-content-padding       : .0rem;
+
+    /* Reduce the font size */
+    --base-font-size: 16px;
+
+    /* Change the theme color hue */
+    --theme-hue: 325;
+
+    /* Change the sidebar bullets */
+    
+  }
   img[alt="logo"] { 
     max-width:  100px; 
     display: block;
     text-align:center;
     margin:auto;
   }
+  .nav-arrow-right{
+      float:right;
+      margin-right:30px;
+      margin-top:-4px;
+    }
+  .nav-arrow-left{
+      float:left;
+      margin-right:8px;
+      margin-top:-4px;
+    }
+  .method{
+      color:white;
+      padding:0px 7px 0px 7px;
+      border-radius:4px;
+      display: inline-block;
+      width: 60px;
+      text-align:center;
+      margin-right:7px;
+      opacity: 0.6;
+    }
+    .get{
+      background-color:blue;
+    }
+    .put{
+      background-color:orange;
+    }
+    .post{
+      background-color:green;
+    }
+    .delete{
+      background-color:red;
+    }
 </style>
 
 </html>

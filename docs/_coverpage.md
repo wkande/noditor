@@ -8,14 +8,16 @@
 
 # Noditor <small>2.1</small>
 
-> Node.js Monitoring 
+> Self Hosted Monitoring 
 
 - Simple and Lightweight
-- Slack Integration
+- Mobile Only
 
-[npm](https://www.npmjs.com/package/noditor)
-[GitHub](https://github.com/wkande/noditor)
 [Get Started](/main.md?id=Overview)
+[GitHub](https://github.com/wkande/noditor)
+[npm](https://www.npmjs.com/package/noditor)
+
+
 
 
 

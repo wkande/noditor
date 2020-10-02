@@ -1,21 +1,71 @@
 # Get Keys
 
-Many Markdown processors support custom IDs for headings — some Markdown processors automatically add them. Adding custom IDs allows you to link directly to headings and modify them with CSS. To add a custom heading ID, enclose the custom ID in curly braces on the same line as the heading
+Gets a list of [keys](keys.md). The passcode is extracted by the API from the JWT Token.
 
-Many Markdown processors support custom IDs for headings — some Markdown processors automatically add them. Adding custom IDs allows you to link directly to headings and modify them with CSS. To add a custom heading ID, enclose the custom ID in curly braces on the same line as the heading
+---
 
-Many Markdown processors support custom IDs for headings — some Markdown processors automatically add them. Adding custom IDs allows you to link directly to headings and modify them with CSS. To add a custom heading ID, enclose the custom ID in curly braces on the same line as the heading
+<span class="method get">GET</span> /keys
 
-Many Markdown processors support custom IDs for headings — some Markdown processors automatically add them. Adding custom IDs allows you to link directly to headings and modify them with CSS. To add a custom heading ID, enclose the custom ID in curly braces on the same line as the heading
+---
 
-Many Markdown processors support custom IDs for headings — some Markdown processors automatically add them. Adding custom IDs allows you to link directly to headings and modify them with CSS. To add a custom heading ID, enclose the custom ID in curly braces on the same line as the heading
+***Parameters***
 
-Many Markdown processors support custom IDs for headings — some Markdown processors automatically add them. Adding custom IDs allows you to link directly to headings and modify them with CSS. To add a custom heading ID, enclose the custom ID in curly braces on the same line as the heading
+| Name        | Type    | In     | Description |
+| :---        | :---    | :---   | :--- |
+| accept      | string  | header | Setting to application/json is recommended. |
+| passcode    | string  | header | Permission and grouping key ([See Passcodes](./passcodes.md)).  |
 
-Many Markdown processors support custom IDs for headings — some Markdown processors automatically add them. Adding custom IDs allows you to link directly to headings and modify them with CSS. To add a custom heading ID, enclose the custom ID in curly braces on the same line as the heading
+---
 
-Many Markdown processors support custom IDs for headings — some Markdown processors automatically add them. Adding custom IDs allows you to link directly to headings and modify them with CSS. To add a custom heading ID, enclose the custom ID in curly braces on the same line as the heading
+***Usage***
+<!-- tabs:start -->
 
-Many Markdown processors support custom IDs for headings — some Markdown processors automatically add them. Adding custom IDs allows you to link directly to headings and modify them with CSS. To add a custom heading ID, enclose the custom ID in curly braces on the same line as the heading
+#### ** CURL **
 
-Many Markdown processors support custom IDs for headings — some Markdown processors automatically add them. Adding custom IDs allows you to link directly to headings and modify them with CSS. To add a custom heading ID, enclose the custom ID in curly braces on the same line as the heading
+```bash
+curl get https://ty.me.com/keys \
+-h {accept:"application/json", passcode:"1234"}
+```
+
+#### ** Javascript **
+
+```javascript
+const options = {
+  headers: {'accept': 'application/json', 'passcode':'1234'}
+};
+
+const resp = await axios.get('/keys', options)
+console.log(resp.data);
+  ```
+<!-- tabs:end -->
+
+---
+
+***Response***
+<!-- tabs:start -->
+#### ** Data **
+```javascript
+{
+  "keys":[
+    {"id":34, 
+    "key":"KJ8HFGF6UJJN56",
+    "name":"Yellowstone"
+    },
+    {"id":35, 
+    "key":"LO8GDFS4543DF0",
+    "name":"Yosemite"
+    }
+  ]
+}
+
+```
+
+#### ** Errors **
+
+```text
+- 200 OK
+- 403 Forbidden
+- 500 Internal server error
+```
+
+<!-- tabs:end -->
